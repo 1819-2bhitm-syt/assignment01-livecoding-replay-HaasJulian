@@ -1,25 +1,18 @@
-let hallo = function(who){
-    console.log("Hallo " + who());
+let logGreeting1 = function(){
+    console.log("Hallo 1");
+};
+
+let logGreeting2 = function(){
+    console.log("Hallo 2");
+};
+
+let logGreeting3 = function(){
+    console.log("Hallo 3");
 };
 
 
-let getName = function(){
 
-    return "Welt";
-};
+logGreeting1();
+setTimeout(logGreeting2, 1000);
+logGreeting3();
 
-hallo(getName);
-
-hallo(function(){
-
-    return "node.js";
-});
-
-
-let hi= function(w){
-    w("Hallo Welt! ");
-};
-
-hi (function(abc){
-    console.log(abc);
-});
