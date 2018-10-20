@@ -1,59 +1,44 @@
-// OBject Literal Syntax
-const circle = {
-    radius: 1,
-    location:{
-        x:1,
-        y:1
-    },
-    draw: function(){
-        console.log('draw1');
-    }
+let hallo = function(str){
+    str="Hallo + "+str;
 };
 
-circle.draw();
+let welt="Welt";
+hallo(welt);
+console.log(welt);
 
-//Factories
-function createCircle(radius){
-    return{
-        radius,
-        draw1: function(){
-            console.log('draw2');
-        }
-    };
+
+//Objekte
+
+let halloObject= function(obj){
+  obj.name="Halo "+obj.name;
+};
+
+let o ={
+   name: "Welt"
+};
+
+halloObject(o);
+console.log(o);
+
+//Objekte2
+
+let halloObject1= function(obj){
+    obj=null;
+};
+
+let o1 ={
+    name: "Welt"
+};
+
+halloObject(o1);
+console.log(o1);
+
+//Beispiele
+let obj2={value: 10};
+
+function increase(obj2){
+    obj2.value++;
 }
-const circle1 = createCircle(1);
-circle1.draw1();
 
-
-//Konstruktor
-function Circle(radius){
-    console.log('this', this);
-    this.radius= radius;
-    this.draw=function(){
-      console.log('draw');
-    };
-}
-
-const another = new Circle(1);
-
-/* Wenn man new weglässt
-function Circle1(radius){
-    console.log('this', this);
-    this.radius= radius;
-    this.draw=function(){
-        console.log('draw');
-    };
-}
-
-const another1 =  Circle1(1);
-*/
-// Objekte Implementieren
-let x={};
-let name ='hallo';
-let ok=false;
-let total=1;
-
-// Anzeigen der erstellenden Funktion
-let name5='susi';
-console.log('name = ', name5, name5.constructor);
-
+increase(obj2);
+console.log(obj2)
